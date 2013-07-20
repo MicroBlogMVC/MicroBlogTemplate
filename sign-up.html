@@ -1,0 +1,19 @@
+<form action="/sign-up" method="POST" novalidate>
+    <legend>Sign Up</legend>
+    <fieldset>
+        
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" />     
+        
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+
+        <label for="password_confirm">Confirm password</label>
+        <input type="password" name="password_confirm" id="password_confirm" />
+
+        <input type="hidden" ... /> <!-- CSRF --> 
+
+        <input type="submit" value="Sign Up" />
+   
+    </fieldset>
+</form>

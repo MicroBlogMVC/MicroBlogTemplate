@@ -1,0 +1,20 @@
+<form action="{{ path('edit_profile') }}" method="POST" enctype="multipart/form-data" novalidate >
+    <legend>Edit your profile</legend>
+
+    <fieldset>
+           
+        <label for="avatar">Avatar</label>
+        <!-- IF the user has already a profile picture : -->
+            <img src="/avatars/+ + the-user-avatar.jpg + +" alt="+ + username + +" />
+        <!-- END IF -->
+        <input type="file" name="avatar" id="avatar" />
+
+        <label for="bio">Bio</label>
+        <textarea name="bio" id="bio" rows="6"></textarea>
+        
+        <input type="hidden" ... /> <!-- CSRF -->     
+
+        <input type="submit" value="Save" />
+
+    </fieldset>
+</form>
