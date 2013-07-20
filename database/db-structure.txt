@@ -1,0 +1,36 @@
+Table for Users
+
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| username | varchar(30)  | NO   | UNI | NULL    |                |
+| password | char(40)     | NO   |     | NULL    |                |
+| salt     | char(32)     | NO   |     | NULL    |                |
+| bio      | varchar(160) | YES  |     | NULL    |                |
+| avatar   | varchar(255) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+
+
+
+
+
+Table for Messages 
+
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| user_id   | int(11)      | NO   | MUL | NULL    |                |
+| message   | varchar(140) | NO   |     | NULL    |                |
+| createdAt | datetime     | NO   |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+
+
+
+
+
+With of course, something like this :
+------------------------------------
+
+ALTER TABLE message ADD CONSTRAINT FK_USER_MESSAGE FOREIGN KEY (user_id) REFERENCES user (id)
