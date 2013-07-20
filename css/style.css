@@ -580,7 +580,8 @@ input[type=submit] {
     transition: all 0.3s;
     width: 14rem;
 }
-input[type=submit]:hover {
+input[type=submit]:hover,
+input[type=submit]:focus {
     background: #FFF;
     border-color: #30A0F6;
     color: #30A0F6;
