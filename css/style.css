@@ -35,8 +35,7 @@ a:hover { text-decoration: underline; }
 
 header:after, 
 .messages li:after, 
-#users:after, 
-#users span:after
+#users:after
 {
     clear: both;
     content: '';
@@ -45,6 +44,11 @@ header:after,
     visibility: hidden;
 }
 
+#users a:after {
+    content: "";
+    display: block;
+    clear: both;
+}
 
 
 
