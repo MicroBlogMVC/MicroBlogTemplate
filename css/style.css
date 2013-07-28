@@ -44,6 +44,7 @@ header:after,
     visibility: hidden;
 }
 
+
 #users a:after {
     content: "";
     display: block;
@@ -77,7 +78,7 @@ header:after,
 .alert-error {
     color: #C34D62;
     font-weight: bold;
-    padding: 1em 1em 1em 0;
+    padding: 1em 1em 2em 0;
 }
 
 
@@ -436,7 +437,7 @@ section {
 #profile > div { /* Clearfix ! */
     background: -webkit-radial-gradient(50% 100%, 50% 5px, #CCC 0%, #F5F5F5 110%);
     margin-bottom: 3em;
-    padding: 2em;
+    padding: 2em 2em 4em 2em;
 }
 
 
@@ -454,6 +455,8 @@ section {
 #profile p { /* bio */
     font-size: 0.9em;
     margin-top: 2em;
+    margin-bottom: -2em;
+    
 }
 
 #profile a:first-child { /* Edit profile btn */
