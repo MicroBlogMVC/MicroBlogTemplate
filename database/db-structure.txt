@@ -8,7 +8,7 @@ Table for Users
 | password | char(40)     | NO   |     | NULL    |                |
 | salt     | char(32)     | NO   |     | NULL    |                |
 | bio      | varchar(160) | YES  |     | NULL    |                |
-| avatar   | varchar(255) | YES  |     | NULL    |                |
+| avatar   | varchar(4)   | YES  |     | NULL    |                |
 +----------+--------------+------+-----+---------+----------------+
 
 
