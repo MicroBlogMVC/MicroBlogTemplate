@@ -452,7 +452,7 @@ section {
     margin-right: 1em;
 }
 
-#profile p { /* bio */
+#profile > div p { /* bio */
     font-size: 0.9em;
     margin-top: 2em;
     margin-bottom: -2em;
