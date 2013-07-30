@@ -23,7 +23,7 @@ Table for Messages
 | id        | int(11)      | NO   | PRI | NULL    | auto_increment |
 | user_id   | int(11)      | NO   | MUL | NULL    |                |
 | message   | varchar(140) | NO   |     | NULL    |                |
-| createdAt | datetime     | NO   |     | NULL    |                |
+| create_at | datetime     | NO   |     | NULL    |                |
 +-----------+--------------+------+-----+---------+----------------+
 
 
