@@ -321,7 +321,7 @@ section {
 #messages li {
     /*border-bottom: 1px solid #E6E6E6;*/
     font-size: 0.9em;
-    padding: 3em 4em;
+    padding: 4em;
     background-image: -webkit-radial-gradient(ellipse 50% 5px at 50% 0, #ccc, #fff); 
        background-image: -moz-radial-gradient(ellipse 50% 5px at 50% 0, #ccc, #fff);    
         background-image: -ms-radial-gradient(ellipse 50% 5px at 50% 0, #ccc, #fff); 
@@ -391,11 +391,13 @@ section {
 
 #users li:nth-child(odd) {
     padding: 1em 1em 1em 0;
+    clear: left;
     float: left;
 } 
 
 #users li:nth-child(even) {
     padding: 1em 0 1em 1em;
+    clear: right;
     float: right;
 }
 
@@ -439,7 +441,7 @@ section {
 #users img {
     float: left;
     margin-right: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em; /* prevents text below img (bio=160 chars max)*/
 }
 
 
