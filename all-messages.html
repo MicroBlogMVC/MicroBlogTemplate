@@ -1,23 +1,138 @@
-    <ul id="messages">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">  
+        <title>MvcTemplate</title> 
+        <link href="css/reset.css" rel="stylesheet" type="text/css" />  
+        <link href="css/style.css" rel="stylesheet" type="text/css" />  
+        <link href="css/font-icons.css" rel="stylesheet" type="text/css" />  
+    </head>
+    <body>
 
-        <li>            
-            <div>
-                <span> + + Date (d M Y H:i) + + </span>
-                <!-- if the client is the author of this message -->
-                    <a href="/delete/+ + message-id + +">
-                        Delete
-                        <i class="icon-remove"></i>
+        <header> 
+            <div class="wrapper">
+                <h1>
+                    MicroBlogMVC
+                    <small>- {Framework used}</small>
+                </h1>
+                <div>
+                    Written by 
+                    <a href="#" title="The one who made this version">{Author}</a>
+                </div>
+            </div>       
+        </header>
+
+
+        <!-- Beginning Navigation -->
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+        <!-- THE "CURRENT" LIST ITEM MUST HAVE THE CLASS ".active" -->
+        <!-- The "Sign in", "Sign up" and "Sign out" list items must have the class ".connection" -->
+
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+        <nav>
+            <ul class="wrapper">
+
+                <li class="active">
+                    <a href="all-message.html">
+                        <i class="icon-quote-right"></i>
+                        Messages
                     </a>
-                <!-- end if  -->
-            </div>           
-            <img src="/avatars/+ + the-user-avatar.jpg + +" alt="" />
-            <strong> + + Author + + </strong>            
-            <q> + + Message content + + </q>
-        </li>
+                </li>
+
+                <li>
+                    <a href="all-users.html">
+                        <i class="icon-group"></i>
+                        Users
+                    </a>
+                </li>    
+
+                <!-- *********************************** -->
+                <!-- only IF the user is logged in : -->  
+
+                <li>
+                    <a href="new-message.html">
+                        <i class="icon-pencil"></i>
+                        New message
+                    </a>
+                </li>
+
+                <li>
+                    <a href="see-profile.html"> <!--  username of connected user -->
+                        <i class="icon-user"></i>
+                        {Author}
+                    </a>
+                </li>
+
+                <li class="connection">
+                    <a href="all-messages.html">
+                        Sign out
+                    </a>
+                </li>
+
+                <!-- ELSE -->
+
+                <li class="connection">
+                    <a href="sign-up.html">
+                        Sign Up
+                    </a>
+                </li>
+
+                <li class="connection">
+                    <a href="sign-in.html">
+                        Sign In
+                    </a>
+                </li>      
+
+                <!-- END IF -->
+                <!-- *********************************** -->
+
+            </ul>
+        </nav>
+        <!-- End Navigation -->
 
 
-        <li>    
-            ....
-        </li>
 
-    </ul>
+
+        <section>
+
+            <p class="alert-success">
+                Eventually some success message
+            </p>   
+
+            <p class="alert-info">
+                Eventually some error message
+            </p>
+
+
+            <!-- CONTENT GOES HERE -->
+            <ul id="messages">
+
+                <li>            
+                    <div>
+                        <span>31/10/2013 09:23:12</span>
+                        <!-- if the client is the author of this message -->
+                        <a href="all-messages.html">
+                            Delete
+                            <i class="icon-remove"></i>
+                        </a>
+                        <!-- end if  -->
+                    </div>           
+                    <img src="avatars/1.jpg" alt="User Avatar" />
+                    <strong>Barack Obama</strong>            
+                    <q>Blah blah blah</q>
+                </li>
+
+
+                <li>    
+                    ....
+                </li>
+
+            </ul>
+
+        </section>
+
+    </body>
+</html>    

@@ -1,18 +1,121 @@
-<form action="+ + /edit-profile + +" method="POST" enctype="multipart/form-data" novalidate >
-    <legend>Edit your profile</legend>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">  
+        <title>MvcTemplate</title> 
+        <link href="css/reset.css" rel="stylesheet" type="text/css" />  
+        <link href="css/style.css" rel="stylesheet" type="text/css" />  
+        <link href="css/font-icons.css" rel="stylesheet" type="text/css" />  
+    </head>
+    <body>
 
-    <fieldset>
-           
-        <label for="avatar">Avatar</label>
-        <img src="/avatars/+ + the-user-avatar.jpg + +" alt="" />
-        <input type="file" name="avatar" id="avatar" />
+        <header> 
+            <div class="wrapper">
+                <h1>
+                    MicroBlogMVC
+                    <small>- {Framework used}</small>
+                </h1>
+                <div>
+                    Written by 
+                    <a href="#" title="The one who made this version">{Author}</a>
+                </div>
+            </div>       
+        </header>
 
-        <label for="bio">Bio</label>
-        <textarea name="bio" id="bio" rows="6"></textarea>
-        
-        <input type="hidden" ... /> <!-- CSRF -->     
 
-        <input type="submit" value="Save" />
+        <!-- Beginning Navigation -->
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-    </fieldset>
-</form>
+        <!-- THE "CURRENT" LIST ITEM MUST HAVE THE CLASS ".active" -->
+        <!-- The "Sign in", "Sign up" and "Sign out" list items must have the class ".connection" -->
+
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+        <nav>
+            <ul class="wrapper">
+
+                <li class="active">
+                    <a href="all-message.html">
+                        <i class="icon-quote-right"></i>
+                        Messages
+                    </a>
+                </li>
+
+                <li>
+                    <a href="all-users.html">
+                        <i class="icon-group"></i>
+                        Users
+                    </a>
+                </li>    
+
+                <!-- *********************************** -->
+                <!-- only IF the user is logged in : -->  
+
+                <li>
+                    <a href="new-message.html">
+                        <i class="icon-pencil"></i>
+                        New message
+                    </a>
+                </li>
+
+                <li>
+                    <a href="see-profile.html"> <!--  username of connected user -->
+                        <i class="icon-user"></i>
+                        {Author}
+                    </a>
+                </li>
+
+                <li class="connection">
+                    <a href="all-messages.html">
+                        Sign out
+                    </a>
+                </li>
+
+                <!-- ELSE -->
+
+                <li class="connection">
+                    <a href="sign-up.html">
+                        Sign Up
+                    </a>
+                </li>
+
+                <li class="connection">
+                    <a href="sign-in.html">
+                        Sign In
+                    </a>
+                </li>      
+
+                <!-- END IF -->
+                <!-- *********************************** -->
+
+            </ul>
+        </nav>
+        <!-- End Navigation -->
+
+
+
+
+        <section>
+            <form action="+ + /edit-profile + +" method="POST" enctype="multipart/form-data" novalidate >
+                <legend>Edit your profile</legend>
+
+                <fieldset>
+
+                    <label for="avatar">Avatar</label>
+                    <img src="/avatars/+ + the-user-avatar.jpg + +" alt="" />
+                    <input type="file" name="avatar" id="avatar" />
+
+                    <label for="bio">Bio</label>
+                    <textarea name="bio" id="bio" rows="6"></textarea>
+
+                    <input type="hidden" ... /> <!-- CSRF -->     
+
+                    <input type="submit" value="Save" />
+
+                </fieldset>
+            </form>
+        </section>
+
+    </body>
+</html>    
